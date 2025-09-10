@@ -1,12 +1,108 @@
-# React + Vite
+Got it 👍 Let’s create a clean and professional **README.md** for your portfolio project. You can copy this directly into your project root.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+````markdown
+# 🌐 Personal Portfolio Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is my **personal portfolio website** built with **React, Vite, and Tailwind CSS**.  
+It showcases my projects, skills, and contact information in a clean, modern design.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack
+
+- ⚛️ **React** – component-based UI
+- ⚡ **Vite** – fast build tool
+- 🎨 **Tailwind CSS** – utility-first styling
+- 🌍 **GitHub Pages** – hosting & deployment
+
+---
+
+## 📦 Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/nazrulhaq12/portfolio.git
+cd portfolio
+````
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the build locally:
+
+```bash
+npm run preview
+```
+
+Deploy to **GitHub Pages**:
+
+```bash
+npm run deploy
+```
+
+---
+
+## 📸 Screenshots
+
+(Add some screenshots of your site here once deployed.)
+
+---
+
+## 📂 Project Structure
+
+```
+portfolio/
+├── public/          # Static assets
+├── src/             # React components & pages
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── components/  # Reusable UI components
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 🌐 Live Demo
+
+👉 [View My Portfolio](https://nazrulhaq12.github.io/portfolio)
+
+---
+
+## 📬 Contact
+
+* GitHub: [@nazrulhaq12](https://github.com/nazrulhaq12)
+* Email: *(add your email here)*
+* LinkedIn: *(add your LinkedIn profile here)*
+
+---
+
+```
+
+---
+
+✨ This will make your GitHub repo look professional and give people clear instructions on how to run and deploy your project.  
+
+👉 Do you want me to also **add badges** (like React, Vite, Tailwind, GitHub Pages) at the top for a more polished look?
+```
