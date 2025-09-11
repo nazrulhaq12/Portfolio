@@ -481,59 +481,59 @@ export default function App() {
         {/* Header - Replaced with the new Navbar component */}
         <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-        {/* Hero */}
-        <section id="home" className="relative flex items-center justify-center min-h-[68vh] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 lg:px-20">
-          <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            {/* Left: Text */}
-            <div className="text-center md:text-left space-y-3">
-              <h2
-                className="text-3xl md:text-4xl font-extrabold tracking-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Hi, I'm <span className="text-yellow-300">Nazrul</span> —{" "}
-                <span style={{ display: "inline-block" }}>
-                  <Typewriter
-                    words={["Full-Stack Developer", "ML Enthusiast", "Problem Solver"]}
-                    loop
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={2000}
-                  />
-                </span>
-              </h2>
+       {/* Hero */}
+<section id="home" className="relative flex items-center justify-center min-h-[68vh] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 lg:px-20">
+  <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    {/* Left: Text */}
+    <div className="text-center md:text-left space-y-3">
+      <h2
+        className="text-3xl md:text-4xl font-extrabold tracking-tight"
+        style={{ fontFamily: "'Playfair Display', serif" }}
+      >
+        Hi, I'm <span className="text-yellow-300">Nazrul</span> —{" "}
+        <span style={{ display: "inline-block" }}>
+          <Typewriter
+            words={["Full-Stack Developer", "ML Enthusiast", "Problem Solver"]}
+            loop
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+          />
+        </span>
+      </h2>
 
-              <p className="max-w-xl mx-auto md:mx-0 text-base md:text-lg text-white/90 leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                I’m a passionate Full-Stack Developer and AI enthusiast — building scalable applications, designing ML solutions, and shipping polished products.
-              </p>
+      <p className="max-w-xl mx-auto md:mx-0 text-base md:text-lg text-white/90 leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
+        I’m a passionate Full-Stack Developer and AI enthusiast — building scalable applications, designing ML solutions, and shipping polished products.
+      </p>
 
-              <blockquote className="italic text-white/80 text-sm md:text-base font-light" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                "Code with purpose, learn with passion, and build for impact."
-              </blockquote>
+      <blockquote className="italic text-white/80 text-sm md:text-base font-light" style={{ fontFamily: "'Poppins', sans-serif" }}>
+        "Code with purpose, learn with passion, and build for impact."
+      </blockquote>
 
-              <div className="mt-4 flex justify-center md:justify-start gap-3">
-                <motion.a whileTap={{ scale: 0.95 }} href="#projects" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg backdrop-blur">
-                  View Projects
-                </motion.a>
-                <motion.a whileTap={{ scale: 0.95 }} href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg">
-                  <FileText size={16} /> Resume
-                </motion.a>
-              </div>
-            </div>
+      <div className="mt-4 flex justify-center md:justify-start gap-3">
+        <motion.a whileTap={{ scale: 0.95 }} href="#projects" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg backdrop-blur">
+          View Projects
+        </motion.a>
+        <motion.a whileTap={{ scale: 0.95 }} href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg">
+          <FileText size={16} /> Resume
+        </motion.a>
+      </div>
+    </div>
 
-            {/* Right: Photo */}
-            <div className="flex justify-center md:justify-end">
-              <motion.img
-                src={`${import.meta.env.BASE_URL}profile.png`}
-                alt="Nazrul Haq"
-                className="w-44 h-44 md:w-56 md:h-56 object-cover"
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 200 }}
-              />
-            </div>
-          </div>
-        </section>
+    {/* Right: Photo */}
+    <div className="flex justify-center md:justify-end">
+      <motion.img
+        src={`${import.meta.env.BASE_URL}profile.png`}
+        alt="Nazrul Haq"
+        className="w-55 h-50 md:w-60 md:h-70 object-contain"
+        whileHover={{ scale: 1.03 }}
+        transition={{ type: "spring", stiffness: 200 }}
+      />
+    </div>
+  </div>
+</section>
 
         {/* About Section */}
         <About />
