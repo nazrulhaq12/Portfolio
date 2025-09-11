@@ -525,7 +525,7 @@ export default function App() {
             {/* Right: Photo */}
             <div className="flex justify-center md:justify-end">
               <motion.img
-                src={`${import.meta.env.BASE_URL}profile.jpg`}
+                src={`${import.meta.env.BASE_URL}profile.png`}
                 alt="Nazrul Haq"
                 className="w-44 h-44 md:w-56 md:h-56 object-cover"
                 whileHover={{ scale: 1.03 }}
