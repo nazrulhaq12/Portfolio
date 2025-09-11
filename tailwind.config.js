@@ -1,4 +1,4 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
   content: [
@@ -6,7 +6,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        merriweather: ['Merriweather', 'serif'],
+      }
+    },
   },
   plugins: [],
 };
