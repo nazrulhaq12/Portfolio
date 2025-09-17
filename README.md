@@ -16,8 +16,6 @@ A fully responsive personal portfolio website built to showcase my skills, proje
 🌐 __Live Demo__
 ---
 
-You can view the live version of the portfolio here:
-
 👉 [__https://nazrulhaq12.github.io/Portfolio/__](https://nazrulhaq12.github.io/Portfolio/)
 
 ---
@@ -25,7 +23,6 @@ You can view the live version of the portfolio here:
 📸 __Screenshots__
 ---
 
-(Here you can add a screenshot of the desktop view and another of the mobile view.)
 <img width="1880" height="872" alt="image" src="https://github.com/user-attachments/assets/5eb49619-976e-4940-8ad5-30216c410ee7" />
 
 
