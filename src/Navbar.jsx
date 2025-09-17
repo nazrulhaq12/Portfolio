@@ -1,94 +1,105 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 
-export default function Navbar({ isDarkMode, toggleDarkMode }) {
+const navLinks = [
+  { title: "Home", href: "#home" },
+  { title: "About", href: "#about" },
+  { title: "Projects", href: "#projects" },
+  { title: "Skills", href: "#skills" },
+  { title: "Contact", href: "#contact" },
+];
+
+const Navbar = ({ isDarkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "projects", label: "Projects" },
-    { id: "contact", label: "Contact" },
-  ];
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const menuVariants = {
+    hidden: { x: "100%" },
+    visible: { x: 0, transition: { type: "tween", ease: "circOut" } },
+    exit: { x: "100%", transition: { type: "tween", ease: "circIn" } },
+  };
+
+  const backdropVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 shadow-md"
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-    >
-      <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-        {/* Logo */}
-        <motion.a
-          href="#home"
-          className="font-bold text-lg md:text-xl text-slate-800 dark:text-slate-100"
-          whileHover={{ scale: 1.05 }}
-        >
-          MyPortfolio
-        </motion.a>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              className="relative text-slate-700 dark:text-slate-200 font-medium hover:text-indigo-500 transition-colors"
-            >
-              {link.label}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-lg shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <a href="#home" className="text-xl font-bold text-slate-800 dark:text-white font-heading">
+              Nazrul.
             </a>
-          ))}
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <a key={link.title} href={link.href} className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                  {link.title}
+                </a>
+              ))}
+              <button onClick={toggleDarkMode} className="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-2">
+               <button onClick={toggleDarkMode} className="p-2 rounded-full text-slate-600 dark:text-slate-300">
+                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+              <button onClick={toggleMenu} className="p-2 rounded-full text-slate-600 dark:text-slate-300">
+                <Menu size={24} />
+              </button>
+            </div>
+          </div>
         </div>
+      </header>
 
-        {/* Right side (Dark mode + Hamburger) */}
-        <div className="flex items-center gap-4">
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-slate-200 dark:bg-slate-700 hover:scale-110 transition-transform"
-            aria-label="Toggle dark mode"
-          >
-            {isDarkMode ? "🌙" : "☀️"}
-          </button>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu Panel (Slide-in) */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-lg"
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.4 }}
+            variants={backdropVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            onClick={toggleMenu}
+            className="fixed inset-0 bg-black/50 z-[60] md:hidden"
           >
-            <div className="flex flex-col items-center py-4 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={`#${link.id}`}
-                  className="text-slate-800 dark:text-slate-200 font-medium hover:text-indigo-500 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
+            <motion.div
+              variants={menuVariants}
+              onClick={(e) => e.stopPropagation()}
+              className="fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-white dark:bg-slate-900 shadow-xl"
+            >
+              <div className="p-6 flex flex-col h-full">
+                <div className="flex justify-between items-center mb-8">
+                   <span className="text-xl font-bold text-slate-800 dark:text-white font-heading">Menu</span>
+                   <button onClick={toggleMenu} className="p-2 rounded-full text-slate-600 dark:text-slate-300">
+                    <X size={24} />
+                   </button>
+                </div>
+                <nav className="flex flex-col gap-6">
+                  {navLinks.map((link) => (
+                    <a key={link.title} href={link.href} onClick={toggleMenu} className="text-lg font-medium text-slate-700 dark:text-slate-200">
+                      {link.title}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   );
-}
+};
+
+export default Navbar;
