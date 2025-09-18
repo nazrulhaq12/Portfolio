@@ -206,16 +206,16 @@ const skillsData = [
   { name: "Problem Solving", level: 88 },
 ];
 const galleryData = [
-  { src: `${import.meta.env.BASE_URL}gallery/img1.jpg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img2.jpg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img3.jpeg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img4.jpeg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img5.jpeg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img6.jpg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img7.jpg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img8.jpg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img9.jpg`, alt: "" },
-  { src: `${import.meta.env.BASE_URL}gallery/img10.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img1.jpg`, alt: "My first project" },
+  { src: `${import.meta.env.BASE_URL}gallery/img2.jpg`, alt: "At a tech conference" },
+  { src: `${import.meta.env.BASE_URL}gallery/img3.jpeg`, alt: "Coding on a coffee break" },
+  { src: `${import.meta.env.BASE_URL}gallery/img4.jpeg`, alt: "My team at a hackathon" },
+  { src: `${import.meta.env.BASE_URL}gallery/img5.jpeg`, alt: "Whiteboard brainstorming" },
+  { src: `${import.meta.env.BASE_URL}gallery/img6.jpg`, alt: "Late night coding session" },
+  { src: `${import.meta.env.BASE_URL}gallery/img7.jpg`, alt: "Presenting a project" },
+  { src: `${import.meta.env.BASE_URL}gallery/img8.jpg`, alt: "Office view" },
+  { src: `${import.meta.env.BASE_URL}gallery/img9.jpg`, alt: "Team photo" },
+  { src: `${import.meta.env.BASE_URL}gallery/img10.jpg`, alt: "AI conference" },
 ];
 const projectsData = [
   {
