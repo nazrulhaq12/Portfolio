@@ -206,30 +206,30 @@ const skillsData = [
   { name: "Problem Solving", level: 88 },
 ];
 const galleryData = [
-  { src: `${import.meta.env.BASE_URL}gallery/img1.jpg`, alt: "My first project" },
-  { src: `${import.meta.env.BASE_URL}gallery/img2.jpg`, alt: "At a tech conference" },
-  { src: `${import.meta.env.BASE_URL}gallery/img3.jpeg`, alt: "Coding on a coffee break" },
-  { src: `${import.meta.env.BASE_URL}gallery/img4.jpeg`, alt: "My team at a hackathon" },
-  { src: `${import.meta.env.BASE_URL}gallery/img5.jpeg`, alt: "Whiteboard brainstorming" },
-  { src: `${import.meta.env.BASE_URL}gallery/img6.jpg`, alt: "Late night coding session" },
-  { src: `${import.meta.env.BASE_URL}gallery/img7.jpg`, alt: "Presenting a project" },
-  { src: `${import.meta.env.BASE_URL}gallery/img8.jpg`, alt: "Office view" },
-  { src: `${import.meta.env.BASE_URL}gallery/img9.jpg`, alt: "Team photo" },
-  { src: `${import.meta.env.BASE_URL}gallery/img10.jpg`, alt: "AI conference" },
+  { src: `${import.meta.env.BASE_URL}gallery/img1.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img2.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img3.jpeg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img4.jpeg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img5.jpeg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img6.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img7.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img8.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img9.jpg`, alt: "" },
+  { src: `${import.meta.env.BASE_URL}gallery/img10.jpg`, alt: "" },
 ];
 const projectsData = [
   {
     title: "Face Recognition Attendance System",
     tags: ["Python", "OpenCV", "face_recognition"],
     description: "Detects and recognizes faces via webcam to log attendance in real-time.",
-    repoLink: "#",
+    repoLink: "https://github.com/nazrulhaq12/FaceRecognition",
     liveLink: "#",
   },
   {
     title: "Face BMI",
     tags: ["Python", "Tkinter", "CNN"],
     description: "Predicts BMI from facial features using a pretrained CNN.",
-    repoLink: "#",
+    repoLink: "https://github.com/nazrulhaq12/BMI",
     liveLink: "#",
   },
   {
@@ -239,6 +239,13 @@ const projectsData = [
     repoLink: "https://github.com/nazrulhaq12/fast-pay-main.git",
     liveLink: "#",
   },
+  {
+  title: "Personal Portfolio Website",
+  tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+  description: "My own responsive personal portfolio, built from scratch to showcase my skills, projects, and professional journey.",
+  repoLink: "https://github.com/nazrulhaq12/Portfolio",
+  liveLink: "https://nazrulhaq12.github.io/Portfolio/",
+},
 ];
 const experienceData = [
   {
