@@ -470,7 +470,7 @@ export default function App() {
                 <motion.a whileTap={{ scale: 0.95 }} onClick={playClickSound} href="#projects" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg backdrop-blur">
                   View Projects
                 </motion.a>
-                <motion.a whileTap={{ scale: 0.95 }} onClick={playClickSound} href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg">
+                <motion.a whileTap={{ scale: 0.95 }} onClick={playClickSound} href={`${import.meta.env.BASE_URL}Resume.pdf`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg">
                   <FileText size={16} /> Resume
                 </motion.a>
                 <motion.a whileTap={{ scale: 0.95 }} onClick={playClickSound} href="https://github.com/nazrulhaq12" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg">

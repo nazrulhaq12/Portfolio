@@ -75,7 +75,7 @@ const About = () => {
               <motion.a
                 whileTap={{ scale: 0.95 }}
                 onClick={playClickSound}
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                href={`${import.meta.env.BASE_URL}Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors"
